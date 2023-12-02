@@ -5,19 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         skillsData = data;
-        // Create particles after fetching skillsData
         createParticles();
-        // Populate the list items
         populateList("Languages", "languages-list");
         populateList("Software", "software-list");
-        // Start the animation
         update();
       })
       .catch((error) => {
         console.error("Error fetching JSON data:", error);
       });
-  
-    // ... (your existing code)
   
     function populateList(category, listId) {
       if (skillsData && skillsData.skills[category]) {
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     }
-  
-    // ... (your existing code)
+    
   });
   

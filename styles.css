@@ -1,177 +1,196 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+    width: 15px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(40, 40, 40); 
+    background: #1a1a1a;
 }
 
-/* Handle on hover */
+::-webkit-scrollbar-thumb {
+    background: rgb(40, 40, 40);
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(60,60,60); 
+    background: rgb(60, 60, 60);
 }
 
 body {
-  background-color: #1a1a1a;
-  margin: 0;
-  padding: 0;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
 }
 
 #canvas {
-  position: absolute; /* Position the canvas absolutely */
-  top: 0;
-  left: 0;
-  margin-top: 40px;
-  z-index: -1; /* Place it behind other elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 40px;
+    z-index: -1;
 }
 
 canvas {
-  display: block;
+    display: block;
 }
 
 * {
-  font: 1em Verdana, sans-serif;
+    font: 1em Verdana, sans-serif;
 }
 
 header {
-  text-align: center;
-  width: 100%; /* Change to 100% for full width */
-  background-color: rgb(30, 30, 30);
-  padding: 1em 0;
-  position: fixed; /* Set header to fixed position */
-  top: 0; /* Stick it to the top */
-  left: 0;
-  z-index: 100; /* Ensure it's above other content */
+    text-align: center;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    padding: 1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  display: inline-block;
-  margin-right: 2em; /* Reduced margin for better spacing */
+    display: inline-block;
+    margin-right: 2em;
 }
 
 nav a {
-  text-decoration: none;
-  color: #ccc; /* Light grey for link text */
-  position: relative; /* Add relative positioning to the link */
-  overflow: hidden; /* Hide any overflow to prevent underline from showing initially */
-  transition: color 0.3s ease-in-out; /* Add transition for text color */
+    text-decoration: none;
+    color: #ccc;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
 }
 
 p {
-  color: #777; /* Slightly lighter grey for paragraph text */
-  text-align: left;
-  font-size: 0.9em;
-  display: inline; /* Display the <p> tag inline */
-  transition: color 0.3s ease-in-out; /* Add transition for text color */
+    color: #777;
+    text-align: left;
+    font-size: 0.9em;
+    display: inline;
+    transition: color 0.3s ease-in-out;
 }
 
 p::after {
-  content: ""; /* Create an empty content pseudo-element */
-  width: 100%; /* Set the width to 100% to extend under the text */
-  height: 2px; /* Set the height of the underline */
-  background-color: #ccc; /* Light grey for the underline */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0); /* Initially, the underline has no width */
-  transform-origin: bottom right; /* Start transformation from the bottom right corner */
-  transition: transform 0.3s ease-in-out; /* Add a transition for underline expansion */
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
 }
 
 nav li:hover a {
-  color: #c8c8c8; /* Change link text color on hover to a slightly lighter grey */
+    color: #c8c8c8;
 }
 
 nav li:hover p::after {
-  transform: scaleX(1); /* Expand the underline width on hover */
-  transform-origin: bottom left; /* Change the transformation origin to bottom left */
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .main-title {
-  color: #c8c8c8;
-  font-size: 96px;
-  margin-bottom: 20px;
+    color: #c8c8c8;
+    font-size: 96px;
+    margin-bottom: 20px;
 }
 
 .container {
-  margin-top: 10em;
-  margin-left: 14em;
+    margin-top: 10em;
+    margin-left: 14em;
 }
 
-.education {
-  color: #c8c8c8;
-  margin-top: 5em;
+.sub-title {
+    color: #c8c8c8;
+    margin-top: 2em;
+    font-size: 1.5em;
 }
 
 .skills {
-  color: #c8c8c8;
-  margin-top: 4em; /* Adjust the top margin as needed */
-  margin-left: -14em;
-  text-align: center; /* Center-align the content */
-  display: flex;
-  justify-content: center;
+    color: #c8c8c8;
+    margin-top: 4em;
+    margin-left: -14em;
+    margin-bottom: 13em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .skills > div {
-  padding: 1em; /* Add some padding to create separation between the divs */
-  box-sizing: border-box; /* Include padding in div width */
-  text-align: left; /* Left-align the content within each div */
-  margin: 0 4em; /* Adjust the margin to control the spacing between the divs */
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0 4em;
 }
 
 .check-list {
-  margin: 0;
-  padding-left: 1.2rem;
+    margin: 0;
+    padding-left: 1.2rem;
 }
 
 .check-list li {
-  position: relative;
-  list-style-type: none;
-  padding-left: 2.5rem;
-  margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: none;
+    padding-left: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .check-list li:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: -2px;
-  width: 5px;
-  height: 11px;
-  border-width: 0 2px 2px 0;
-  border-style: solid;
-  border-color: rgb(100, 100, 100);
-  transform-origin: bottom left;
-  transform: rotate(45deg);
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    transform-origin: bottom left;
+    transform: rotate(45deg);
 }
 
 .about-me {
-  /* Adjust margin-top for About Me section as needed */
-  margin-top: 10em;
-  margin-right: 14em;
-  text-align: left;
-  color: rgb(180, 180, 180);
-  /* Keep other styles for the About Me section */
+    margin-top: 10em;
+    margin-right: 14em;
+    text-align: left;
+    color: rgb(180, 180, 180);
 }
 
 .about-me div {
-  margin-left: 2em;
-  margin-bottom: 20em;
+    margin-left: 2em;
+    margin-bottom: 10em;
+}
+
+.pdf-container {
+    text-align: center;
+    margin-bottom: 5em;
+    margin-left: -14em;
+}
+
+.pdf-object {
+    width: 100%;
+    max-width: 800px;
+    height: 900px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.plain-link {
+    text-decoration: none;
+    color: inherit;
+    color: rgb(180, 180, 180);
 }

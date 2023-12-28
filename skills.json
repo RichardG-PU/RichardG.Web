@@ -1,28 +1,29 @@
 {
     "skills": {
-      "Languages": [
-        "JavaScript",
-        "C#",
-        "Java",
-        "Python",
-        "Swift",
-        "PHP",
-        "Lua",
-        "Bash",
-        "Shell"
-      ],
-      "Software": [
-        "Eclipse",
-        "Visual Studio Code",
-        "Visual Studio",
-        "GitHub",
-        "Git",
-        "X-Code",
-        "Windows",
-        "MacOs",
-        "Linux",
-        "Vue.js",
-        "Svelte"
-      ]
+        "Languages": [
+            "C#",
+            "Swift",
+            "PHP",
+            "Python",
+            "Java",
+            "JavaScript",
+            "Lua",
+            "C++",
+            "Bash",
+            "SQL"
+        ],
+        "Software": [
+            "Eclipse",
+            "Visual Studio Code",
+            "Visual Studio",
+            "GitHub",
+            "Git",
+            "X-Code",
+            "Windows",
+            "MacOs",
+            "Linux",
+            "Vue.js",
+            "Svelte"
+        ]
     }
-  }
+}

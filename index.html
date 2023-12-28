@@ -9,19 +9,36 @@
         <script type="text/javascript" src="canvas/main.js"></script>
         <link rel="stylesheet" type="text/css" href="styles.css" />
     </head>
+    <script>
+        function scrollToSection(tag) {
+            var aboutMeSection = document.getElementById(tag);
+            if (aboutMeSection) {
+                var targetPosition = aboutMeSection.offsetTop - 100;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth",
+                });
+            }
+            return false;
+        }
+    </script>
     <body>
         <canvas id="canvas"></canvas>
         <header>
             <nav>
                 <ul>
                     <li>
-                        <a href="#about-me"><p>About me</p></a>
+                        <a onclick='scrollToSection("about-me"); return false;'
+                            ><p>About me</p></a
+                        >
                     </li>
                     <li>
-                        <a href="#skills"><p>Skills</p></a>
+                        <a onclick='scrollToSection("skills")'><p>Skills</p></a>
                     </li>
                     <li>
-                        <a href="#projects"><p>Projects (soon)</p></a>
+                        <a onclick='scrollToSection("projects")'
+                            ><p>Projects (soon)</p></a
+                        >
                     </li>
                 </ul>
             </nav>
@@ -34,22 +51,10 @@
             <br />
             <p class="make-stuff">I make stuff</p>
 
-            <div class="education">Software Engineer</div>
+            <div class="sub-title">Software Engineer</div>
             <br />
-            <div class="education" id="skills">Skills</div>
-            <div class="skills">
-                <div>
-                    <h4>Languages</h4>
-                    <ul class="check-list" id="languages-list"></ul>
-                </div>
-
-                <div>
-                    <h4>Software and Frameworks</h4>
-                    <ul class="check-list" id="software-list"></ul>
-                </div>
-            </div>
             <div class="about-me" id="about-me">
-                <h2>About Me</h2>
+                <h2 class="sub-title">About Me</h2>
                 <div>
                     I am presently pursuing a degree in Computer Science at
                     Ahuntsic College in Montreal, Quebec, with an expected
@@ -72,24 +77,37 @@
                     enjoyment from the process of problem-solving.
                 </div>
             </div>
-            <div>
-                <h4>Curriculum Vitae</h4>
+            <div class="sub-title" id="skills">Skills</div>
+            <div class="skills">
                 <div>
+                    <h4>Languages</h4>
+                    <ul class="check-list" id="languages-list"></ul>
+                </div>
+
+                <div>
+                    <h4>Software and Frameworks</h4>
+                    <ul class="check-list" id="software-list"></ul>
+                </div>
+            </div>
+            <div class="pdf-container">
+                <p class="sub-title">Curriculum Vitae</p>
+                <div class="pdf-object">
                     <object
-                        data="/uploads/CV_P_Gajda_Richard.pdf"
+                        data="/uploads/CVEN.pdf"
                         type="application/pdf"
                         width="100%"
-                        height="500px"
+                        height="100%"
                     >
                         <p>
                             Unable to display PDF file.
-                            <a href="/uploads/CV_P_Gajda_Richard.pdf"
-                                >Download</a
-                            >
+                            <a href="/uploads/CVEN.pdf">Download</a>
                             instead.
                         </p>
                     </object>
                 </div>
+                <a href="/uploads/CV_P_Gajda_Richard.pdf" class="plain-link"
+                    >Click here to see the french version</a
+                >
             </div>
         </div>
     </body>
